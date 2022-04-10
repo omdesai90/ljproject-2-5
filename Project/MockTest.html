@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnTech | MockTest</title>
+    <link rel="stylesheet" href="MockTest.css">
+
+    
+<script>
+
+    var numQues = 10;
+    
+    var numChoi = 3;
+    
+    var answers = new Array(10);
+    
+    answers[0] = "HyperText Markup Language";
+    
+    answers[1] = "HTML, Head, Title, Body";
+    
+    answers[2] = "b";
+    
+    answers[3] = "h1";
+    
+    answers[4] = "br";
+    
+    answers[5] = "ul";
+    
+    answers[6] = "/";
+    
+    answers[7] = "i";
+    
+    answers[8] = "u";
+    
+    answers[9] = "horizontal ruler";
+        
+    function getScore(form) {
+    
+    var score = 0;
+    
+    var currElt;
+    
+    var currSelection;
+    
+    for (i=0; i<numQues; i++) {
+    
+    currElt = i*numChoi;
+    
+    answered=false;
+    
+    for (j=0; j<numChoi; j++) {
+    
+    currSelection = form.elements[currElt + j];
+    
+    if (currSelection.checked) {
+    
+    answered=true;
+    
+    if (currSelection.value == answers[i]) {
+    
+    score++;
+    
+    break;
+    
+    }
+    
+    }
+    
+    }
+    
+    if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+    
+    }
+    
+    var scoreper = Math.round(score/numQues*100);
+    
+    form.percentage.value = scoreper + "%";
+    
+    form.mark.value=score;
+    
+    }
+    
+    </script>
+    
+</head>
+
+<body>
+
+        <div class="quiz">
+
+            <center><h1>Quiz Questions</h1></center>
+
+            <p>
+            
+            <form name="quiz">
+            
+            <p>
+            
+            <b>Question 1.
+            
+            <br> HTML stands for _______. <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q1" value="HighText Machine Language">HighText Machine Language<br>
+            
+            <input type="radio" name="q1" value="HyperText and links Markup Language">HyperText and links Markup Language<br>
+            
+            <input type="radio" name="q1" value="HyperText Markup Language">HyperText Markup Language<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 2.
+            
+            <br>The correct sequence of HTML tags for starting a webpage is _____ <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q2" value="Head, Title, HTML, body">Head, Title, HTML, body<br>
+            
+            <input type="radio" name="q2" value="HTML, Body, Title, Head">HTML, Body, Title, Head<br>
+            
+            <input type="radio" name="q2" value="HTML, Head, Title, Body">HTML, Head, Title, Body<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 3.
+            
+            <br>Which of the following element is responsible for making the text bold in HTML?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q3" value="pre">pre<br>
+            
+            <input type="radio" name="q3" value="a">a<br>
+            
+            <input type="radio" name="q3" value="b">b<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 4.
+            
+            <br>Which of the following tag is used for inserting the largest heading in HTML?
+            <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q4" value="h2">h2<br>
+            
+            <input type="radio" name="q4" value="h4">h4<br>
+            
+            <input type="radio" name="q4" value="h1">h1<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 5.
+            
+            <br>Which of the following tag is used to insert a line-break in HTML?
+
+            <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q5" value="a">a<br>
+            
+            <input type="radio" name="q5" value="br">br<br>
+            
+            <input type="radio" name="q5" value="b">b<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 6.
+            
+            <br>How to create an unordered list (a list with the list items in bullets) in HTML?
+
+            <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q6" value="li">li<br>
+            
+            <input type="radio" name="q6" value="ol">ol<br>
+            
+            <input type="radio" name="q6" value="ul">ul<br>
+            
+            </blockquote>
+            
+            <p><b>
+            <hr>    
+            
+            Question 7.
+            
+            <br>Which character is used to represent the closing of a tag in HTML?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q7" value="/">/<br>
+            
+            <input type="radio" name="q7" value=".">.<br>
+            
+            <input type="radio" name="q7" value="\">\<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 8.
+            
+            <br>Which of the following element is responsible for making the text italic in HTML?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q8" value="i">i<br>
+            
+            <input type="radio" name="q8" value="it">it<br>
+            
+            <input type="radio" name="q8" value="italic">italic<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 9.
+            
+            <br>Which of the following tag is used to make the underlined text?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q9" value="u">u<br>
+            
+            <input type="radio" name="q9" value="ul">ul<br>
+            
+            <input type="radio" name="q9" value="l">l<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 10.
+            
+            <br>The hr tag in HTML is used for -<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q10" value="horizontal ruler">horizontal ruler<br>
+            
+            <input type="radio" name="q10" value="new paragraph">new paragraph<br>
+            
+            <input type="radio" name="q10" value="new line">new line<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+           
+            <p><b>
+            
+            <input style="font-size: 20px;margin-right: 10px;" type="button"value="Total Score"onClick="getScore(this.form);">
+            
+            <input style="font-size: 20px;" type="reset" value="Clear"><p>
+            
+            Number of score out of 10 = <input type= text size=20 name= "mark">
+            
+            Score in percentage = <input type=text size=10 name="percentage"><br>
+            
+            </form>
+            
+            <p>
+            
+            <form method="post" name="Form" onsubmit="" action="">
+            
+            </form>
+
+        </div>
+   
+
+        
+</body> 
+</html>
+
+
+
+
+
+
+

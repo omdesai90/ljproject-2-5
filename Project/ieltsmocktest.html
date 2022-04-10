@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnTech | MockTest</title>
+    <link rel="stylesheet" href="MockTest.css">
+
+    
+<script>
+
+    var numQues = 10;
+    
+    var numChoi = 3;
+    
+    var answers = new Array(10);
+    
+    answers[0] = "have most likely studied a specific area of psychology";
+    
+    answers[1] = "refers to a set of principles and studies taught to candidates";
+    
+    answers[2] = "a complete description of various experiments relating to the training a candidate has completed";
+    
+    answers[3] = "usually depend on the country in which the degree is attained.";
+    
+    answers[4] = "can expect to be involved in various responsibilities and activities.";
+    
+    answers[5] = "could move to different institutions with opportunities.";
+    
+    answers[6] = "to offset the burden of extra courses on full-time faculty";
+    
+    answers[7] = "provides more career opportunities for potential Psychology faculty.";
+    
+    answers[8] = "most likely completed on-the-job training with a professional.";
+    
+    answers[9] = "could move to different institutions with opportunities.";
+        
+    function getScore(form) {
+    
+    var score = 0;
+    
+    var currElt;
+    
+    var currSelection;
+    
+    for (i=0; i<numQues; i++) {
+    
+    currElt = i*numChoi;
+    
+    answered=false;
+    
+    for (j=0; j<numChoi; j++) {
+    
+    currSelection = form.elements[currElt + j];
+    
+    if (currSelection.checked) {
+    
+    answered=true;
+    
+    if (currSelection.value == answers[i]) {
+    
+    score++;
+    
+    break;
+    
+    }
+    
+    }
+    
+    }
+    
+    if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+    
+    }
+    
+    var scoreper = Math.round(score/numQues*100);
+    
+    form.percentage.value = scoreper + "%";
+    
+    form.mark.value=score;
+    
+    }
+    
+    </script>
+    
+</head>
+
+<body>
+
+        <div class="quiz">
+
+            <center><h1>Quiz Questions</h1></center>
+
+            <p>
+            
+            <form name="quiz">
+            
+            <p>
+                <h3><b>First read the paragraphand than give the ans</b> </h3>
+
+                People who choose to study psychology have a variety of choices when it comes to long-term careers. A bachelor's degree in psychology can provide a good foundation for a range of different professions. Statistics show that many students who graduate with a bachelor's degree in the subject have no intention of actually becoming psychologists. 
+
+                Professionals who hold a PhD in psychology have far more options open to them than graduates with a bachelor's or a master's degree. In fact, completing doctoral level training is often a requirement in order to be officially recognized as a 'psychologist.' Higher salaries and improved career prospects are also an incentive.
+                
+                In general, anyone wishing to continue a career in psychology at a 4-year institution of higher education must earn a doctoral degree in psychology. In most areas of psychology, this translates into earning a PhD in a relevant area of psychology, such as family counseling or trauma. Some PhD candidates choose applied psychology whereas others opt to focus on research. Depending on the amount of training received, or the desired specialty of a candidate, an individual could be anything from a biological psychologist to a clinical psychologist in an academic setting.
+                
+                The term 'PhD' refers to a doctor of philosophy degree, but 'philosophy' is a broad term. In this case, 'philosophy' refers to diverse disciplinary perspectives that would be grouped together in a traditional college of liberal arts and sciences.
+                
+                Although the requirements to earn a PhD vary depending on the country, individuals obtaining this degree can expect to complete a dissertation, which is a thorough research paper describing experiments or studies done as part of the doctoral training of a candidate. In order for the degree to be conferred, a dissertation usually must be defended before a committee of expert reviewers. However, this requirement varies depending on the country.
+                
+                Once someone earns a PhD, the individual can begin seeking out a faculty appointment at a college or university. This usually involves multi-tasking duties and splitting time between teaching, research, and service to the institution and profession. This is one reason why professors relocate to different institutions in a short amount of time; they must find the best personal fit among the various academic environments that are available to them. 
+                
+                Often times, schools offer more courses in psychology than their full-time faculty can handle. In these cases, it is not uncommon to find adjunct faculty members or instructors who take on teaching various courses. Although adjunct faculty members have the necessary training to teach in the university setting, they often hold primary careers outside of the academic setting and utilize their teaching experiences as secondary careers. Although rare, these faculty members may not hold the doctoral degree required by most accredited 4-year institutions and use these opportunities to gain useful experience in teaching.  
+                
+                As many 2-year colleges are coming to fruition, many of them are in need of faculty to teach their psychology courses. Although a qualification at this level will not lead directly to employment in the field, it can provide a solid foundation in the subject and a stepping stone to more advanced studies. These types of colleges are often in need of faculty to teach their psychology courses. In general, many of the people who pursue careers at these institutions hold at least a master's degree in psychology, although some PhDs choose to develop careers at these institutions as well.
+                
+                Recent PhD graduates may also choose to start an independent career, establishing an office and offering therapy sessions to the public. Usually, these individuals completed job shadowing or internships with an experienced psychologist during their academic career, efficiently preparing them for best practices when choosing to work in this setting. Although this option is very appealing to many newly qualified psychologists, some find it difficult to manage the business side of the practice. While they may have all the skills required to be a good clinician, they may lack the necessary financial and marketing acumen.
+                
+                It is not uncommon for individuals who have just earned their PhD to enroll in postdoctoral training programs. These programs assist candidates in obtaining experience before going on to serve as faculty at the given institution. Those interested in scientific psychology will usually complete a few postdoctoral programs, allowing them to develop research programs and broaden their research skills under the helpful supervision of other professors in the psychology field. 
+                
+                In terms of what the future holds, it is widely predicted that the demand for psychological services in schools, hospitals and health centers will increase dramatically in the next ten years. Industrial-organizational psychologists, who focus on behavior in the workplace, are expected to be particularly sought after. In addition, aging populations in many parts of the world will require the services of psychologists specifically trained to help people face the mental and physical challenges associated with growing older.    
+            
+            <P>
+
+
+            <b>Question 1.
+            
+            <br> Psychologists who hold a PhD? <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q1" value="must work in a 4-year institution of higher
+            education. ">must work in a 4-year institution of higher
+            education. <br>
+            
+            <input type="radio" name="q1" value="have most likely studied a specific area of
+            psychology.">have most likely studied a specific area of
+            psychology.<br>
+            
+            <input type="radio" name="q1" value="usually do not pursue careers in academia.">usually do not pursue careers in academia.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 2.
+            
+            <br>The term 'philosophy'?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q2" value="refers to a set of principles and studies taught
+            to candidates">refers to a set of principles and studies taught
+            to candidates<br>
+            
+            <input type="radio" name="q2" value="differentiates the level of the PhD obtained by
+            Psychology candidates.">differentiates the level of the PhD obtained by
+            Psychology candidates.<br>
+            
+            <input type="radio" name="q2" value="is only used for candidates studying in liberal
+            arts colleges.">is only used for candidates studying in liberal
+            arts colleges.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 3.
+            <br>When earning a PhD, a dissertation is?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q3" value="an optional requirement">an optional requirement<br>
+            
+            <input type="radio" name="q3" value="always defended before a committee of
+            experts in the field.">always defended before a committee of
+            experts in the field.<br>
+            
+            <input type="radio" name="q3" value="a complete description of various experiments
+            relating to the training a candidate has
+            completed">a complete description of various experiments
+            relating to the training a candidate has
+            completed<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 4.
+            
+            <br>The requirements for completing a PhD?
+            <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q4" value="usually depend on the country in which the
+            degree is attained.">usually depend on the country in which the
+            degree is attained.<br>
+            
+            <input type="radio" name="q4" value="are different in each institution.">are different in each institution.<br>
+            
+            <input type="radio" name="q4" value="rely mostly on oral, project-based learning.">rely mostly on oral, project-based learning.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 5.
+            
+            <br>Candidates who apply for work as full-time faculty at the university level?
+
+
+
+            <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q5" value="can expect to be hired while obtaining a PhD.">can expect to be hired while obtaining a PhD.<br>
+            
+            <input type="radio" name="q5" value="can expect to devote all of their time on a
+            given task, such as teaching or researching.">can expect to devote all of their time on a
+            given task, such as teaching or researching.<br>
+            
+            <input type="radio" name="q5" value="can expect to be involved in various responsibilities and activities.">can expect to be involved in various responsibilities and activities.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 6.
+            
+            <br>Those who hold a PhD and teach in higher education?
+
+            <br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q6" value="end up pursuing other degrees as their careers progress.">end up pursuing other degrees as their careers progress.<br>
+            
+            <input type="radio" name="q6" value="train adjunct professors in their spare time.">train adjunct professors in their spare time.<br>
+            
+            <input type="radio" name="q6" value="could move to different institutions with opportunities.">could move to different institutions with opportunities.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            Question 7.
+            
+            <br>Adjunct faculty members are usually hired?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q7" value="to serve as mentors to graduate students">to serve as mentors to graduate students<br>
+            
+            <input type="radio" name="q7" value="to offset the burden of extra courses on full-time faculty">to offset the burden of extra courses on full-time faculty<br>
+            
+            <input type="radio" name="q7" value="to bridge the gap between doctoral research and full-time teaching.">to bridge the gap between doctoral research
+            and full-time teaching.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 8.
+            
+            <br>The increase of 2-year colleges?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q8" value="provides more career opportunities for
+            potential Psychology faculty.">provides more career opportunities for
+            potential Psychology faculty.<br>
+            
+            <input type="radio" name="q8" value="only increases opportunities for candidates
+            who hold PhDs in Psychology.">only increases opportunities for candidates
+            who hold PhDs in Psychology.<br>
+            
+            <input type="radio" name="q8" value="only increases opportunities for candidates
+            who have Master Degrees in Psychology.">only increases opportunities for candidates
+            who have Master Degrees in Psychology.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 9.
+            
+            <br>Individuals who choose to follow a self-governing career path?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q9" value="have usually had a PhD for a few years.">have usually had a PhD for a few years.<br>
+            
+            <input type="radio" name="q9" value="were likely not accepted to work in higher
+            education.">were likely not accepted to work in higher
+            education.<br>
+            
+            <input type="radio" name="q9" value="most likely completed on-the-job training with
+            a professional.">most likely completed on-the-job training with
+            a professional.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+            
+            Question 10.
+            
+            <br>Those who hold a PhD and teach in higher education?<br></b>
+            
+            <blockquote>
+            
+            <input type="radio" name="q10" value="end up pursuing other degrees as their careers progress.">end up pursuing other degrees as their careers progress.<br>
+            
+            <input type="radio" name="q10" value="train adjunct professors in their spare time.">train adjunct professors in their spare time.<br>
+            
+            <input type="radio" name="q10" value="could move to different institutions with opportunities.">could move to different institutions with opportunities.<br>
+            
+            </blockquote>
+            
+            <p><b>
+            
+            <hr>
+           
+            <p><b>
+            
+            <input style="font-size: 20px;margin-right: 10px;" type="button"value="Total Score"onClick="getScore(this.form);">
+            
+            <input style="font-size: 20px;" type="reset" value="Clear"><p>
+            
+            Number of score out of 10 = <input type= text size=20 name= "mark">
+            
+            Score in percentage = <input type=text size=10 name="percentage"><br>
+            
+            </form>
+            
+            <p>
+            
+            <form method="post" name="Form" onsubmit="" action="">
+            
+            </form>
+
+        </div>
+   
+
+        
+</body> 
+</html>
+
+
+
+
+
+
+
+

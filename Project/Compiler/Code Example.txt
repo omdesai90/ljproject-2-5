@@ -1,0 +1,16 @@
+<p id="demo">hjkllkjjjjj</p>
+<button onclick="fun()">button</button>
+
+
+
+
+body{
+color:red;
+}
+
+
+
+function fun(){
+document.getElementById("demo").innerHTML = 5 + 6;
+}
+
